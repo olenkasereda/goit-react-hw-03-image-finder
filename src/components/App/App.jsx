@@ -17,8 +17,6 @@ export class App extends Component {
   };
 
   componentDidUpdate(prevProps, prevState) {
-    console.log(this.state.query, 'новое имя');
-    console.log(prevState.query, 'предыдущкее имия');
     if (
       prevState.query !== this.state.query ||
       prevState.page !== this.state.page
@@ -30,7 +28,6 @@ export class App extends Component {
         isLoader: true,
       })
         .then(images => {
-          console.log(images.total);
           this.setState(prevState => ({
             images: [...prevState.images, ...images.hits],
             total: images.totalHits,

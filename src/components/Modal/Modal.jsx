@@ -36,12 +36,10 @@ export const ImageModal = ({ isOpen, onRequestClose, image }) => {
 };
 
 ImageModal.propTypes = {
-  isOpen: PropTypes.func.isRequired,
+  isOpen: PropTypes.bool.isRequired,
   onRequestClose: PropTypes.func.isRequired,
-  image: PropTypes.arrayOf(
-    PropTypes.shape({
-      largeImageURL: PropTypes.string.isRequired,
-      tags: PropTypes.string.isRequired,
-    })
-  ).isRequired,
+  image: PropTypes.shape({
+    largeImageURL: PropTypes.string.isRequired,
+    tags: PropTypes.string.isRequired,
+  }).isRequired,
 };
