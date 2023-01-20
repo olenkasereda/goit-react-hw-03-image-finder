@@ -16,7 +16,7 @@ export class App extends Component {
     page: 1,
   };
 
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(_, prevState) {
     if (
       prevState.query !== this.state.query ||
       prevState.page !== this.state.page
@@ -43,7 +43,7 @@ export class App extends Component {
   }
 
   handleFormSubmit = ({ value }) => {
-    this.setState({ query: value, images: [] });
+    this.setState({ query: value, images: [], page: 1 });
   };
 
   openModal = selectedImage => {
@@ -68,7 +68,7 @@ export class App extends Component {
     return (
       <>
         <Searchbar onSubmit={this.handleFormSubmit} />
-        {this.state.images.length === 0 && <h1> Requested image not found</h1>}
+        {this.state.images.length === 0 && <h1>There are no pictures</h1>}
         {this.state.isLoader && <Loader />}
         {this.state.images.length !== 0 && (
           <ImageGallery

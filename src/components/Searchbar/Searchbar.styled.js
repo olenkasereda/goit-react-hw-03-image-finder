@@ -53,7 +53,7 @@ export const InputError = styled.div`
   left: 50%;
   transform: translate(-50%, -2px);
 
-  color: #ff9697;
+  color: #b2f0b1;
   display: block;
   font-size: 20px;
   padding: 0.5rem 0.75rem;
@@ -76,15 +76,3 @@ export const SearchForInput = styled(Field)`
     font-size: 18px;
   }
 `;
-
-// export const FormLabel = styled.label`
-//   position: absolute;
-//   width: 1px;
-//   height: 1px;
-//   padding: 0;
-//   overflow: hidden;
-//   clip: rect(0, 0, 0, 0);
-//   white-space: nowrap;
-//   clip-path: inset(50%);
-//   border: 0;
-// `;

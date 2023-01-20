@@ -1,5 +1,3 @@
-// import PropTypes from 'prop-types';
-
 const BASE_URL = 'https://pixabay.com/api/';
 const API_KEY = '31255242-50a56ca895b91ac33e828d5f7';
 
